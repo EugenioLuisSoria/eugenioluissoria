@@ -42,15 +42,15 @@ euge:hover {
 
   width: 50vw;
   height: 50vh;
-  background: url("../../public/el_ventanal.jpg");
+  background: url("../public/el_ventanal.jpg");
   background-size: cover;
   /* La imagen de fondo cubrirá el contenedor manteniendo su relación de aspecto */
   background-position: center;
   /* Centra la imagen de fondo en el contenedor */
 
   /* Usamos mask para aplicar la máscara de la imagen PNG */
-  -webkit-mask-image: url("../../public/LPA-LOGO_03.png");
-  mask-image: url("../../public/LPA-LOGO_03.png");
+  -webkit-mask-image: url("../public/el_ventanal.jpg");
+  mask-image: url("../public/LPA-LOGO_03.png");
   mask-size: 150%;
   /* La máscara se ajustará dentro del contenedor manteniendo su relación de aspecto */
   mask-repeat: no-repeat;
