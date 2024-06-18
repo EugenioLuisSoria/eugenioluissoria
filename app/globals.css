@@ -2,32 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.euge {
+  position: absolute;
+  font-size: 3.5rem;
+  background-color: aliceblue;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5vh;
+  transition: 1s;
+  z-index: 2;
+}
+
+euge:hover {
+  position: absolute;
+  border: 12vw solid red;
+  outline: 2.5vw solid green;
+  left: 50vw;
+}
+
+.peteGrande {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5vw solid red;
+  outline: 0.5vw solid green;
+  /* Simula un margen coloreado */
+}
+
+.pete {
+
+
+  width: 50vw;
+  height: 50vh;
+  background: url("../../public/el_ventanal.jpg");
+  background-size: cover;
+  /* La imagen de fondo cubrirá el contenedor manteniendo su relación de aspecto */
+  background-position: center;
+  /* Centra la imagen de fondo en el contenedor */
+
+  /* Usamos mask para aplicar la máscara de la imagen PNG */
+  -webkit-mask-image: url("../../public/LPA-LOGO_03.png");
+  mask-image: url("../../public/LPA-LOGO_03.png");
+  mask-size: 150%;
+  /* La máscara se ajustará dentro del contenedor manteniendo su relación de aspecto */
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 150%;
+  /* Compatibilidad con navegadores WebKit */
+  -webkit-mask-repeat: no-repeat;
+
+  /* Posiciona la máscara en la zona específica del contenedor */
+  -webkit-mask-position: center center;
+  /* Ajusta la posición de la máscara en el centro */
+  mask-position: center center;
+  /* Ajusta la posición de la máscara en el centro */
 }
